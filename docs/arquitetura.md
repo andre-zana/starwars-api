@@ -8,7 +8,8 @@ Este documento explica como a API foi estruturada e como ela funciona.
 
 ## Diagrama Simplificado
 
-\\\
+![alt text](diagrama.png)
+
 ┌─────────────┐
 │   Cliente   │  (Postman, navegador, etc)
 └──────┬──────┘
@@ -43,7 +44,6 @@ Este documento explica como a API foi estruturada e como ela funciona.
 │   SWAPI (externa)    │
 │  swapi.dev/api       │
 └──────────────────────┘
-\\\
 
 ---
 
