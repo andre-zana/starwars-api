@@ -25,8 +25,8 @@ Este projeto foi desenvolvido como parte do processo seletivo para Desenvolvedor
 ## Estrutura do Projeto
 
 starwars-api/
-    - docs/
-        - arquitetura.md (Documentação técnica)
+- docs/
+    - arquitetura.md (Documentação técnica)
 
     -> src/
 
@@ -73,30 +73,32 @@ A API vai estar rodando em \http://localhost:8080\
 
 ### Raiz
 
-GET /
+- GET /
+
 Retorna informações básicas da API e lista de endpoints
 
 ### Filmes
 
-GET /api/films
-GET /api/films/{id}
+- GET /api/films
+- GET /api/films/{id}
+
 Parâmetros: \search\, \sort_by\, \order\
 
 ### Personagens
 
-GET /api/people
-GET /api/people/{id}
+- GET /api/people
+- GET /api/people/{id}
 Parâmetros: \search\, \sort_by\, \order\
 
 ### Planetas
 
-GET /api/planets
-GET /api/planets/{id}
+- GET /api/planets
+- GET /api/planets/{id}
 
 ### Naves
 
-GET /api/starships
-GET /api/starships/{id}
+- GET /api/starships
+- GET /api/starships/{id}
 
 ---
 
@@ -126,7 +128,7 @@ Resultado: 13 testes realizados com sucesso!
 ## Arquitetura
 
 O projeto foi estruturado pensando em deploy no Google Cloud Platform:
-Cliente → API Gateway → Cloud Function → SWAPI
+- Cliente → API Gateway → Cloud Function → SWAPI
 
 Documentação completa em \docs/arquitetura.md\
 
@@ -135,10 +137,10 @@ Documentação completa em \docs/arquitetura.md\
 ## Deploy (preparado para GCP)
 
 O projeto está pronto para ser deployado como Cloud Function:
-gcloud functions deploy starwars-api
---runtime python314
---trigger-http
---entry-point starwars_api
+- gcloud functions deploy starwars-api
+- --runtime python314
+- --trigger-http
+- --entry-point starwars_api
 
 ---
 
@@ -168,6 +170,6 @@ Durante o desenvolvimento deste projeto:
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 André Zana - Desenvolvido para o processo seletivo PowerOfData - 2026
