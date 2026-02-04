@@ -24,9 +24,9 @@ Este projeto foi desenvolvido como parte do processo seletivo para Desenvolvedor
 
 ## Estrutura do Projeto
 
-# 1. starwars-api/
-    # 1.1. docs/
-        # 1.1.1. arquitetura.md (Documentação técnica)
+starwars-api/
+    - docs/
+        - arquitetura.md (Documentação técnica)
 
     -> src/
 
@@ -43,9 +43,8 @@ Este projeto foi desenvolvido como parte do processo seletivo para Desenvolvedor
     -> .gitignore    
 
     -> README.md
-
+    
     -> requirements.txt
-
 
 ---
 
