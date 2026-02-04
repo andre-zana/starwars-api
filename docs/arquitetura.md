@@ -10,41 +10,6 @@ Este documento explica como a API foi estruturada e como ela funciona.
 
 ![alt text](diagrama.png)
 
-┌─────────────┐
-│   Cliente   │  (Postman, navegador, etc)
-└──────┬──────┘
-       │ HTTP
-       ▼
-┌─────────────────┐
-│   API Gateway   │  (GCP - controla acesso)
-└──────┬──────────┘
-       │
-       ▼
-┌─────────────────────────────┐
-│   Cloud Function (Flask)    │
-│                             │
-│   ┌──────────────────┐     │
-│   │    main.py       │     │
-│   │  (endpoints)     │     │
-│   └────────┬─────────┘     │
-│            │                │
-│   ┌────────▼─────────┐     │
-│   │  swapi_client.py │     │
-│   │  (busca dados)   │     │
-│   └────────┬─────────┘     │
-│            │                │
-│   ┌────────▼─────────┐     │
-│   │    utils.py      │     │
-│   │  (formata dados) │     │
-│   └──────────────────┘     │
-└─────────────┬───────────────┘
-              │
-              ▼
-┌──────────────────────┐
-│   SWAPI (externa)    │
-│  swapi.dev/api       │
-└──────────────────────┘
-
 ---
 
 ## Como Funciona
@@ -195,9 +160,9 @@ Se tivesse mais tempo, eu implementaria:
 ## Considerações de Performance
 
 ### O que foi feito:
-- ✅ Cache LRU implementado
-- ✅ Session pooling do requests
-- ✅ Timeout configurado
+- Cache LRU implementado
+- Session pooling do requests
+- Timeout configurado
 
 ### Limitações:
 - SWAPI às vezes é lenta (não temos controle)
@@ -208,11 +173,11 @@ Se tivesse mais tempo, eu implementaria:
 ## Conclusão
 
 O projeto atende os requisitos do case:
-- ✅ Consome a SWAPI
-- ✅ Endpoints funcionais
-- ✅ Filtros e ordenação
-- ✅ Pronto para GCP
-- ✅ Testes implementados
-- ✅ Código organizado
+- Consome a SWAPI
+- Endpoints funcionais
+- Filtros e ordenação
+- Pronto para GCP
+- Testes implementados
+- Código organizado
 
 A arquitetura é simples mas eficiente, pensada para ser escalável no futuro.

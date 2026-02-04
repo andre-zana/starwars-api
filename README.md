@@ -1,10 +1,10 @@
 ﻿# Star Wars API - Case Técnico PowerOfData
 
-API REST em Python que consome a SWAPI (Star Wars API) e disponibiliza dados sobre filmes, personagens, planetas e naves da saga Star Wars.
+API REST em Python que consome a API SWAPI (Star Wars API) e disponibiliza dados sobre filmes, personagens, planetas e naves da saga Star Wars.
 
 ---
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto foi desenvolvido como parte do processo seletivo para Desenvolvedor Back End Python na PowerOfData.
 
@@ -12,7 +12,7 @@ Este projeto foi desenvolvido como parte do processo seletivo para Desenvolvedor
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - Python 3.14
 - Flask (framework web)
@@ -22,149 +22,118 @@ Este projeto foi desenvolvido como parte do processo seletivo para Desenvolvedor
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
-\\\
 starwars-api/
-├── src/
-│ ├── main.py # Endpoints da API
-│ ├── swapi_client.py # Cliente para consumir SWAPI
-│ └── utils.py # Funções auxiliares
-├── tests/
-│ └── test_api.py # Testes automatizados
-├── docs/
-│ └── arquitetura.md # Documentação técnica
-├── requirements.txt
-└── README.md
-\\\
+    -> docs/
+        - arquitetura.md (Documentação técnica)
+    -> src/
+        - main.py (Endpoints da API)
+        - swapi_client.py (Cliente para consumir SWAPI)
+        - utils.py (Funções auxiliares)
+    -> tests/
+        - test_api.py (Testes automatizados)
+    -> .gitignore    
+    -> README.md
+    -> requirements.txt
 
 ---
 
-## 🚀 Como Rodar o Projeto
+## Como Rodar o Projeto (Terminal)
 
 ### 1. Clonar o repositório
-
-\\\ash
-git clone https://github.com/andre-zana/starwars-api.git
-cd starwars-api
-\\\
+- git clone https://github.com/andre-zana/starwars-api.git
+- cd starwars-api
 
 ### 2. Criar ambiente virtual
-
-\\\ash
-python -m venv venv
-.\\venv\\Scripts\\activate # Windows
-\\\
+- python -m venv venv
+- .\\venv\\Scripts\\activate # Windows
 
 ### 3. Instalar dependências
-
-\\\ash
-pip install -r requirements.txt
-\\\
+- pip install -r requirements.txt
 
 ### 4. Rodar a aplicação
-
-\\\ash
-cd src
-python main.py
-\\\
+- cd src
+- python main.py
 
 A API vai estar rodando em \http://localhost:8080\
 
 ---
 
-## 📡 Endpoints Disponíveis
+## Endpoints Disponíveis
 
 ### Raiz
 
-\\\
 GET /
-\\\
 Retorna informações básicas da API e lista de endpoints
 
 ### Filmes
 
-\\\
 GET /api/films
-GET /api/films/<id>
-\\\
+GET /api/films/{id}
 Parâmetros: \search\, \sort_by\, \order\
 
 ### Personagens
 
-\\\
 GET /api/people
-GET /api/people/<id>
-\\\
+GET /api/people/{id}
 Parâmetros: \search\, \sort_by\, \order\
 
 ### Planetas
 
-\\\
 GET /api/planets
-GET /api/planets/<id>
-\\\
+GET /api/planets/{id}
 
 ### Naves
 
-\\\
 GET /api/starships
-GET /api/starships/<id>
-\\\
+GET /api/starships/{id}
 
 ---
 
-## 🧪 Testes
+## Testes (terminal)
 
 Para rodar os testes:
-\\\ash
-pytest tests/ -v
-\\\
+- pytest tests/ -v
 
-Resultado: 13 testes passando ✅
+Resultado: 13 testes realizados com sucesso!
 
 ---
 
-## 💡 Funcionalidades Implementadas
+## Funcionalidades Implementadas
 
-- ✅ Consumo da API SWAPI
-- ✅ Endpoints REST completos
-- ✅ Filtros por busca textual
-- ✅ Ordenação de resultados
-- ✅ Dados formatados e limpos
-- ✅ Cache para melhorar performance
-- ✅ Testes automatizados
-- ✅ Tratamento de erros
-- ✅ Código organizado e documentado
+- Consumo da API SWAPI
+- Endpoints REST completos
+- Filtros por busca textual
+- Ordenação de resultados
+- Dados formatados e limpos
+- Cache para melhorar performance
+- Testes automatizados
+- Tratamento de erros
+- Código organizado e documentado
 
 ---
 
-## 🏗️ Arquitetura
+## Arquitetura
 
 O projeto foi estruturado pensando em deploy no Google Cloud Platform:
-
-\\\
 Cliente → API Gateway → Cloud Function → SWAPI
-\\\
 
 Documentação completa em \docs/arquitetura.md\
 
 ---
 
-## 🔄 Deploy (preparado para GCP)
+## Deploy (preparado para GCP)
 
 O projeto está pronto para ser deployado como Cloud Function:
-
-\\\ash
-gcloud functions deploy starwars-api \\
---runtime python314 \\
---trigger-http \\
+gcloud functions deploy starwars-api
+--runtime python314
+--trigger-http
 --entry-point starwars_api
-\\\
 
 ---
 
-## 📚 O Que Aprendi
+## O Que Aprendi
 
 Durante o desenvolvimento deste projeto:
 
@@ -192,7 +161,4 @@ Durante o desenvolvimento deste projeto:
 
 ## 👨‍💻 Autor
 
-André Zana  
-[GitHub](https://github.com/andre-zana)
-
-Desenvolvido para o processo seletivo PowerOfData - 2026
+André Zana - Desenvolvido para o processo seletivo PowerOfData - 2026
