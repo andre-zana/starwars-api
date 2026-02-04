@@ -27,24 +27,15 @@ Este projeto foi desenvolvido como parte do processo seletivo para Desenvolvedor
 starwars-api/
 - docs/
     - arquitetura.md (Documentação técnica)
-
-    -> src/
-
-        - main.py (Endpoints da API)
-
-        - swapi_client.py (Cliente para consumir SWAPI)
-
-        - utils.py (Funções auxiliares)
-
-    -> tests/
-
-        - test_api.py (Testes automatizados)
-
-    -> .gitignore    
-
-    -> README.md
-    
-    -> requirements.txt
+- src/
+    - main.py (Endpoints da API)
+    - swapi_client.py (Cliente para consumir SWAPI)
+    - utils.py (Funções auxiliares)
+- tests/
+    - test_api.py (Testes automatizados)
+- .gitignore
+- README.md
+- requirements.txt
 
 ---
 
@@ -88,6 +79,7 @@ Parâmetros: \search\, \sort_by\, \order\
 
 - GET /api/people
 - GET /api/people/{id}
+
 Parâmetros: \search\, \sort_by\, \order\
 
 ### Planetas
