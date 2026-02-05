@@ -1,6 +1,4 @@
-﻿"""
-API Star Wars - Endpoint principal para Google Cloud Functions
-"""
+﻿# API Star Wars - Endpoint principal para Google Cloud Functions
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from swapi_client import SWAPIClient
@@ -21,7 +19,7 @@ swapi = SWAPIClient()
 
 @app.route('/')
 def home():
-    """Endpoint raiz com informacoes da API"""
+    # Endpoint raiz com informacoes da API
     return jsonify({
         "message": "Star Wars API - PowerOfData",
         "version": "1.0.0",
@@ -67,7 +65,7 @@ def get_films():
 
 @app.route('/api/films/<int:film_id>', methods=['GET'])
 def get_film_by_id(film_id):
-    """Retorna um filme especifico por ID"""
+    # Retorna um filme especifico por ID
     data = swapi.get_film_by_id(film_id)
     
     if 'error' in data:
@@ -108,7 +106,7 @@ def get_people():
 
 @app.route('/api/people/<int:person_id>', methods=['GET'])
 def get_person_by_id(person_id):
-    """Retorna um personagem especifico por ID"""
+    # Retorna um personagem especifico por ID
     data = swapi.get_person_by_id(person_id)
     
     if 'error' in data:
@@ -149,7 +147,7 @@ def get_planets():
 
 @app.route('/api/planets/<int:planet_id>', methods=['GET'])
 def get_planet_by_id(planet_id):
-    """Retorna um planeta especifico por ID"""
+    # Retorna um planeta especifico por ID
     data = swapi.get_planet_by_id(planet_id)
     
     if 'error' in data:
@@ -190,7 +188,7 @@ def get_starships():
 
 @app.route('/api/starships/<int:starship_id>', methods=['GET'])
 def get_starship_by_id(starship_id):
-    """Retorna uma nave especifica por ID"""
+    # Retorna uma nave especifica por ID
     data = swapi.get_starship_by_id(starship_id)
     
     if 'error' in data:
@@ -201,7 +199,10 @@ def get_starship_by_id(starship_id):
 
 # Para Google Cloud Functions
 def starwars_api(request):
-    """Entry point para Google Cloud Functions"""
+    """
+    Entry point para Google Cloud Functions
+    Essa função é chamada automaticamente pelo GCP quando alguém faz requisição
+    """
     with app.request_context(request.environ):
         return app.full_dispatch_request()
 

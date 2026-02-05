@@ -1,13 +1,11 @@
-﻿"""
-Funções utilitárias para processamento de dados
-"""
+﻿# Funções utilitárias para processamento de dados
 from typing import List, Dict, Any
 from functools import wraps
 import time
 
 
 def extract_id_from_url(url: str) -> int:
-    """Extrai o ID de uma URL da SWAPI"""
+    # Extrai o ID de uma URL da SWAPI
     try:
         return int(url.rstrip('/').split('/')[-1])
     except (ValueError, IndexError):
@@ -15,7 +13,7 @@ def extract_id_from_url(url: str) -> int:
 
 
 def format_film_data(film: Dict) -> Dict:
-    """Formata dados de um filme"""
+    # Formata dados de um filme
     return {
         "id": extract_id_from_url(film.get("url", "")),
         "title": film.get("title"),
@@ -31,7 +29,7 @@ def format_film_data(film: Dict) -> Dict:
 
 
 def format_person_data(person: Dict) -> Dict:
-    """Formata dados de um personagem"""
+    # Formata dados de um personagem
     return {
         "id": extract_id_from_url(person.get("url", "")),
         "name": person.get("name"),
@@ -48,7 +46,7 @@ def format_person_data(person: Dict) -> Dict:
 
 
 def format_planet_data(planet: Dict) -> Dict:
-    """Formata dados de um planeta"""
+    # Formata dados de um planeta
     return {
         "id": extract_id_from_url(planet.get("url", "")),
         "name": planet.get("name"),
@@ -65,7 +63,7 @@ def format_planet_data(planet: Dict) -> Dict:
 
 
 def format_starship_data(starship: Dict) -> Dict:
-    """Formata dados de uma nave"""
+    # Formata dados de uma nave
     return {
         "id": extract_id_from_url(starship.get("url", "")),
         "name": starship.get("name"),
@@ -85,7 +83,7 @@ def format_starship_data(starship: Dict) -> Dict:
 
 
 def sort_results(results: List[Dict], sort_by: str, order: str = "asc") -> List[Dict]:
-    """Ordena resultados por um campo específico"""
+    # Ordena resultados por um campo específico
     reverse = order.lower() == "desc"
     try:
         return sorted(results, key=lambda x: x.get(sort_by, ""), reverse=reverse)
@@ -94,7 +92,7 @@ def sort_results(results: List[Dict], sort_by: str, order: str = "asc") -> List[
 
 
 def measure_time(func):
-    """Decorator para medir tempo de execução"""
+    # Mede quanto tempo uma função leva para executar
     @wraps(func)
     def wrapper(*args, **kwargs):
         start = time.time()
