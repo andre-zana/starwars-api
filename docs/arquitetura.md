@@ -117,32 +117,6 @@ A função \starwars_api(request)\ em \main.py\ é o ponto de entrada para o GCP
 
 ---
 
-## Melhorias Futuras
-
-Se tivesse mais tempo, eu implementaria:
-
-1. **Autenticação**
-   - API Key para controlar acesso
-   - Limite de requisições por usuário
-
-2. **Cache Distribuído**
-   - Redis no Cloud Memorystore
-   - Cache compartilhado entre instâncias
-
-3. **Logs Estruturados**
-   - Cloud Logging
-   - Rastreamento de erros
-
-4. **Paginação**
-   - Para listas muito grandes
-   - Melhor performance
-
-5. **Documentação Swagger**
-   - Interface visual para testar a API
-   - Documentação automática
-
----
-
 ## Testes
 
 ### Estratégia de Testes

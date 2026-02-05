@@ -136,29 +136,15 @@ O projeto está pronto para ser deployado como Cloud Function:
 
 ---
 
-## O Que Aprendi
+## Critérios Atendidos
 
-Durante o desenvolvimento deste projeto:
-
-- Como consumir APIs externas com Python
-- Estruturação de APIs REST com Flask
-- Implementação de cache para otimização
-- Testes automatizados com pytest
-- Preparação de código para cloud
-
----
-
-## 🎯 Critérios Atendidos
-
-| Requisito           | Status |
-| ------------------- | ------ |
-| Utilizar Python     | ✅     |
-| Consumir SWAPI      | ✅     |
-| Criar endpoints     | ✅     |
-| Implementar filtros | ✅     |
-| Testes unitários    | ✅     |
-| Documentação        | ✅     |
-| Estrutura GCP       | ✅     |
+- Utilizar Python
+- Consumir SWAPI
+- Criar endpoints
+- Implementar filtros
+- Testes unitários
+- Documentação
+- Estrutura GCP
 
 ---
 
