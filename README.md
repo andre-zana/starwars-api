@@ -60,6 +60,19 @@ A API vai estar rodando em \http://localhost:8080\
 
 ---
 
+## API em Produção
+
+A API está disponível online no Google Cloud Platform:
+
+**URL Base:** https://us-central1-project-d7f76f27-1455-435c-b86.cloudfunctions.net/starwars-api
+
+**Exemplos de uso:**
+- Endpoint raiz: https://us-central1-project-d7f76f27-1455-435c-b86.cloudfunctions.net/starwars-api
+- Listar filmes: https://us-central1-project-d7f76f27-1455-435c-b86.cloudfunctions.net/starwars-api/api/films
+- Buscar personagens: https://us-central1-project-d7f76f27-1455-435c-b86.cloudfunctions.net/starwars-api/api/people?search=luke
+
+---
+
 ## Endpoints Disponíveis
 
 ### Raiz
